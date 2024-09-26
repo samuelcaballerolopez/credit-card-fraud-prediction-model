@@ -15,7 +15,9 @@ from sklearn.metrics import roc_curve, auc, classification_report
 
 #dataset link (from kaggle): https://www.kaggle.com/datasets/kelvinkelue/credit-card-fraud-prediction
 
-df = pd.read_csv('C:/Users/samue/OneDrive/Desktop/PROG/credit card/fraud test.csv', sep=',')
+
+
+df = pd.read_csv('C:/Users/samue/OneDrive/Desktop/PROG/fraud_prediction/credit_card_data.csv', sep=',')
 df.head(5)
 print(df.columns)
 print(df.dtypes)
@@ -65,7 +67,7 @@ data = data.drop(columns=['city_pop'])
 
 
 
-#clasification - logistic regression
+#classification - logistic regression
 y = data['fraud']
 x = data.drop(columns=['fraud'])
 x = sm.add_constant(x, prepend=False)
